@@ -1,0 +1,6 @@
+App\Entity\User:
+  user_1:
+    email: admin@admin.local
+    password: <('$2y$12$wiN7w.K4bj9HWa/qwtLUb.EPvzgMyXgJpd9Ar4yw1rJDz7G9Lvvny')> # admin
+    roles: ['ROLE_ADMIN']
+    apiToken: eb0bcb7b7b9c1f4636538663f74ee7a6

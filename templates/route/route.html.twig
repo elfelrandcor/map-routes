@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col">
+            {% if route.cover is defined %}
+                <img id="cover-route" src="{{ asset('media/'~route.cover.path) }}"
+                     class="align-self-center mr-3 img-fluid" alt="{{ route.cover.path }}"/>
+            {% endif %}
+        </div>
+        <div class="col">
+            <h4 class="row">
+                <i class="fas fa-book"></i>
+                {{ route.title }}
+            </h4>
+            <h4 class="row">
+                <i class="fas fa-user"></i>
+                {{ route.user.username }}
+            </h4>
+            <div class="row">
+                <p class="lead">{{ route.description.text }}</p>
+            </div>
+
+            <div class="row">
+                <div id="score" data-route-score="{{ route.score }}" data-route-id="{{ route.id }}"></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
